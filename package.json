@@ -13,7 +13,7 @@
     "data:import": "node backend/seeders",
     "data:destroy": "node backend/seeders -d",
     "proxy": "http://localhost:4000/",
-     "build": "./frontend/build"
+     "heroku-postbuild": "NPM_CONFIG_PRODUCTION npm install --prefix frontend && npm run build-prefix frontend"
   },
   "author": "Aniket",
   "license": "ISC",
