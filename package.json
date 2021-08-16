@@ -1,0 +1,45 @@
+
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "mern shopping app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeders",
+    "data:destroy": "node backend/seeders -d",
+    "proxy": "http://localhost:4000/",
+     "build": "webpack"
+  },
+  "author": "Aniket",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "graphql": "^15.5.1",
+    "graphql-yoga": "^1.16.7",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-bootstrap": "^1.6.1",
+    "react-dnd": "^14.0.2",
+    "react-loader-spinner": "^4.0.0",
+    "react-loadingg": "^1.7.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
