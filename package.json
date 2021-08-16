@@ -13,7 +13,7 @@
     "data:import": "node backend/seeders",
     "data:destroy": "node backend/seeders -d",
     "proxy": "http://localhost:4000/",
-     "build": "webpack"
+     "build": "./frontend/build"
   },
   "author": "Aniket",
   "license": "ISC",
