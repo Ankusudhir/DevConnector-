@@ -7,6 +7,7 @@ import multer from 'multer'
 
 const getProducts = asyncHandler(async (req,res) =>  {
     
+  
 
   //const pageSize = 1
 
@@ -27,6 +28,8 @@ const getProducts = asyncHandler(async (req,res) =>  {
 
   //pages = Math.ceil(count/pageSize)
 
+    console.log(products)
+
     res.json({products})
   })
 
@@ -34,6 +37,9 @@ const getProductById = asyncHandler(async (req,res) => {
     const product = await Product.findById(req.params.id)
 
     if(product) {
+
+       console.log(product,"vjavkhVCKHSDVKHFVEWJFVUK")
+
         res.json(product)
     }
     else {

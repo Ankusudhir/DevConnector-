@@ -17,6 +17,12 @@ var router = express.Router()
 router.route('/').get(getProducts).post(protect,fileUpload.single('image'),createProduct)
   
 
+//@description fetch single product
+//@route GET /api/products/id
+//@access Public
+router.route('/:id').get(getProductById).delete(protect,admin,deleteProduct).put(protect,admin,updateProduct)
+
+
 //@description fetch all top rated products
 //@route GET /api/proucts/top
 //@access Public
@@ -31,10 +37,6 @@ router.route('/top').get(getTopProducts)
   // access Private
   router.route('/:id/reviews').post(protect,createProductReview)
   
-//@description fetch single product
-//@route GET /api/products/id
-//@access Public
-  router.route('/:id').get(getProductById).delete(protect,admin,deleteProduct).put(protect,admin,updateProduct)
 
 
   
